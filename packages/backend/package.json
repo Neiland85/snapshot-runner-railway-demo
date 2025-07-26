@@ -5,22 +5,33 @@
   "description": "API GraphQL del proyecto Snapshot Runner",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "node --loader ts-node/esm src/index.ts",
+    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
+    "dev:simple": "node --loader ts-node/esm src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "lint": "eslint . --ext .ts,.js",
+    "type-check": "tsc --noEmit",
     "test": "echo \"No hay tests definidos\" && exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^3.13.0",
+    "@apollo/server": "^4.10.0",
+    "@apollo/subgraph": "^2.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.21.2",
-    "graphql": "^16.11.0"
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
-    "@types/node": "^24.1.0",
+    "@graphql-tools/schema": "^10.0.25",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.23",
+    "@types/node": "^22.9.1",
+    "graphql-playground-middleware-express": "^1.7.23",
+    "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
