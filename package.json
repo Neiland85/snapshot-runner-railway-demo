@@ -1,0 +1,36 @@
+{
+  "name": "snapshot-runner-railway-demo",
+  "version": "1.0.0",
+  "description": "Snapshot Runner is a Railway-powered demo that launches ephemeral containers from a React + GraphQL UI to run security audits like port scans and dependency checks. Designed for builders, it showcases CI/CD, Copilot-based architecture, and full-stack automation with ADR-driven decisions.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs,.cjs,.json,.md,.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neiland85/snapshot-runner-railway-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neiland85/snapshot-runner-railway-demo/issues"
+  },
+  "homepage": "https://github.com/Neiland85/snapshot-runner-railway-demo#readme",
+  "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.32.0",
+    "@eslint/json": "^0.13.1",
+    "@eslint/markdown": "^7.1.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
+    "husky": "^8.0.0",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.38.0"
+  }
+}
