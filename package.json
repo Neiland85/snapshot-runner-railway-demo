@@ -1,20 +1,32 @@
 {
   "name": "snapshot-runner-railway-demo",
   "version": "1.0.0",
-  "description": "Snapshot Runner is a Railway-powered demo that launches ephemeral containers from a React + GraphQL UI to run security audits like port scans and dependency checks. Designed for builders, it showcases CI/CD, Copilot-based architecture, and full-stack automation with ADR-driven decisions.",
+  "description": "Railway-powered demo showcasing ephemeral container security audits through React + GraphQL interface with comprehensive CI/CD and security monitoring",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs,.cjs,.json,.md,.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "security": "./security-check.sh"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neiland85/snapshot-runner-railway-demo.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "railway",
+    "security",
+    "ephemeral-containers",
+    "react",
+    "graphql",
+    "typescript",
+    "monorepo",
+    "ci-cd",
+    "vulnerability-scanning",
+    "security-dashboard"
+  ],
+  "author": "Neil Muñoz Lago (Neiland85) <contact@neiland.dev>",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Neiland85/snapshot-runner-railway-demo/issues"
   },
