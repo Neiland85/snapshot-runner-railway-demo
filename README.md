@@ -311,4 +311,5 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 El proyecto demuestra las mejores prácticas en desarrollo moderno, incluyendo Architecture Decision Records (ADR), automatización con GitHub Actions, y un enfoque security-first desde el diseño hasta el despliegue.
 
-**Desarrollado con ❤️ por Neil Muñoz Lago (Neiland85)**
+**Desarrollado por Neil Muñoz Lago (Neiland85)**
+Copyright Apache 2.0
