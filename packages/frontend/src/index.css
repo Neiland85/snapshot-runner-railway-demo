@@ -1,25 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Importar el nuevo sistema Railway V0.dev */
+@import './globals.css';
 
-/* Railway Custom Styles */
-@layer base {
-  :root {
-    --background: 15 23 42;
-    /* dark-900 */
-    --foreground: 248 250 252;
-    /* dark-50 */
-    --card: 30 41 59;
-    /* dark-800 */
-    --card-foreground: 248 250 252;
-    /* dark-50 */
-    --primary: 139 92 246;
-    /* primary-500 Railway Purple */
-    --primary-foreground: 248 250 252;
-    /* dark-50 */
-    --secondary: 51 65 85;
-    /* dark-700 */
-    --secondary-foreground: 248 250 252;
+:root {
+  --secondary-foreground: 248 250 252;
     /* dark-50 */
     --muted: 51 65 85;
     /* dark-700 */
@@ -39,44 +22,42 @@
     /* dark-800 */
     --ring: 139 92 246;
     /* primary-500 */
-  }
 }
 
-@layer base {
-  * {
-    @apply border-gray-200 dark:border-gray-700;
+* {
+  border-color: #374151;
   }
-    body {
-    @apply bg-background text-foreground;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    }
-    }
-    
-    /* Custom Railway Glassmorphism */
-    .glass {
-      background: rgba(30, 41, 59, 0.8);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-    }
-    
-    .glass-hover:hover {
-      background: rgba(30, 41, 59, 0.9);
-      border-color: rgba(139, 92, 246, 0.4);
-    }
-    
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: rgb(30, 41, 59);
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: rgb(139, 92, 246);
-      border-radius: 4px;
+
+body {
+  background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+/* Custom Railway Glassmorphism */
+.glass {
+  background: rgba(30, 41, 59, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.glass-hover:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(30, 41, 59);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(139, 92, 246);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
