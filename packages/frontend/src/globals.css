@@ -1,0 +1,131 @@
+/* Railway Dashboard - CSS Variables V0.dev Style */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    /* Railway Purple Theme (Compatible con V0.dev) */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262.1 83.3% 57.8%; /* Railway Purple */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.75rem;
+
+    /* Threat Colors for Security Dashboard */
+    --threat-critical: 0 84.2% 60.2%;
+    --threat-high: 27.8 96% 61%;
+    --threat-medium: 47.9 95.8% 53.1%;
+    --threat-low: 142.1 76.2% 36.3%;
+    --threat-info: 200.4 98% 39.4%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Railway Dashboard Specific Animations */
+@layer utilities {
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .threat-glow-critical {
+    box-shadow: 0 0 20px hsl(var(--threat-critical) / 0.5);
+  }
+
+  .threat-glow-high {
+    box-shadow: 0 0 15px hsl(var(--threat-high) / 0.4);
+  }
+
+  .threat-glow-medium {
+    box-shadow: 0 0 10px hsl(var(--threat-medium) / 0.3);
+  }
+
+  .threat-glow-low {
+    box-shadow: 0 0 8px hsl(var(--threat-low) / 0.3);
+  }
+
+  .data-stream {
+    background: linear-gradient(
+      90deg, 
+      transparent 0%, 
+      hsl(var(--primary) / 0.2) 50%, 
+      transparent 100%
+    );
+  }
+
+  .pulse-border {
+    animation: pulse-border 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-border {
+    0%, 100% {
+      border-color: hsl(var(--border));
+    }
+    50% {
+      border-color: hsl(var(--primary) / 0.5);
+    }
+  }
+
+  .gradient-text-railway {
+    @apply bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .card-railway {
+    @apply rounded-xl bg-slate-800/50 backdrop-blur-sm border border-white/10;
+  }
+}

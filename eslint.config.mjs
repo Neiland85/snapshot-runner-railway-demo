@@ -18,6 +18,24 @@ export default defineConfig([
     ],
   },
 
+  // Configuración base de seguridad
+  {
+    rules: {
+      // Reglas de seguridad
+      'no-eval': 'error',
+      'no-implied-eval': 'error',
+      'no-new-func': 'error',
+      'no-script-url': 'error',
+      'no-inline-comments': 'off',
+      // Detectar credenciales hardcodeadas
+      'no-secrets/no-secrets': 'off', // Requiere plugin adicional
+      // Prevenir inyección de código
+      'security/detect-object-injection': 'off', // Requiere eslint-plugin-security
+      'security/detect-non-literal-regexp': 'off',
+      'security/detect-unsafe-regex': 'off',
+    },
+  },
+
   // Reglas generales para JS/TS/JSX/TSX
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
